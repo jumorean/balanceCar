@@ -45,13 +45,13 @@ int main (void)
     {
 	    printf("正在加速, 占空比为 : %f\n", bright/1024.0);
       pwmWrite (1, bright) ;
-      delay (60) ;
+      delay (30) ;
     }
     for (bright =  150; bright >= 102; --bright)
     {
 	    printf("正在减速,占空比为 : %f\n", bright/1024.0);
       pwmWrite (1, bright) ;
-      delay (60) ;
+      delay (30) ;
     }
   }
 
