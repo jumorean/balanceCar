@@ -1,6 +1,6 @@
 //这是一个输出pwm的程序
 //输出引脚为GPIO.1
-//
+
 
 #include <wiringPi.h>
 
@@ -21,13 +21,13 @@ int main (void)
 
   for (;;)
   {	  	  
-    for (bright = 102; bright < 150; ++bright)
+    for (bright = 102; bright < 1024; ++bright)
     {
 	    printf("正在加速, 占空比为 : %f\n", bright/1024.0);
       pwmWrite (1, bright) ;
       delay (30) ;
     }
-    for (bright =  150; bright >= 102; --bright)
+    for (bright =  1024; bright >= 102; --bright)
     {
 	    printf("正在减速,占空比为 : %f\n", bright/1024.0);
       pwmWrite (1, bright) ;
