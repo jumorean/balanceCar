@@ -21,17 +21,17 @@ int main (void)
 
   for (;;)
   {	  	  
-    for (bright = 102; bright < 220; ++bright)
+    for (bright = 102; bright < 1023; ++bright)
     {
 	    printf("正在加速, 占空比为 : %f\n", bright/1024.0);
       pwmWrite (1, bright) ;
-      delay (30) ;
+      delay (10) ;
     }
-    for (bright =  120; bright >= 102; --bright)
+    for (bright =  1023; bright >= 102; --bright)
     {
 	    printf("正在减速,占空比为 : %f\n", bright/1024.0);
       pwmWrite (1, bright) ;
-      delay (30) ;
+      delay (10) ;
     }
   }
 
