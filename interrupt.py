@@ -1,7 +1,8 @@
 #!python3
-
+#加一点注释
 
 import RPi.GPIO as gpio
+
 
 
 gpio.setmode(gpio.BOARD)
